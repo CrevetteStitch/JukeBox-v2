@@ -220,9 +220,9 @@ h2 {
     position: fixed;
     display: inline-block;
     animation: turnAround 5s infinite linear;
-    top: 12%; /* Centrage vertical */
-    left: 60%; /* Centrage horizontal */
-    transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+    top: 12%; 
+    left: 60%; 
+    transform: translate(-50%, -50%);
 }
 
 .paused {
