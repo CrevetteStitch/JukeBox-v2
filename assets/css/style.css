@@ -1,0 +1,226 @@
+figure {
+  margin: 0;
+  color:#000000;
+}
+
+#lecteur{
+  width: 50%;
+}
+
+body{
+    text-align: center;
+    background-color: rgb(101, 101, 101);
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+img {
+  width: 250px; 
+  height: auto; 
+}
+
+
+.button-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    position: fixed;
+    top:0%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar a  {
+    margin: 0 10px;
+    color: #06ab00;
+    padding: 14px 20px;
+    text-decoration: none;
+    
+}
+
+.navbar a:hover {
+    background-color: #06ab00;
+    color: black;
+}
+
+  .navbar a:hover {
+    background-color: #ddd; /* couleur de fond au survol */
+    color: rgb(0, 0, 0); /* couleur du texte au survol */
+  }
+h2 {
+    color: azure;
+    align-items: center;
+    cursor: pointer; /* Définir le curseur de la souris en pointeur pour indiquer l'interaction */
+    transition: color 0.3s ease; /* Transition de couleur de 0.3s avec une courbe d'accélération */
+  }
+
+  button {
+    background-color: yellowgreen;
+    text-decoration:solid;
+  }
+
+  /* Animation pour le changement de couleur du titre lors de la sélection */
+  @keyframes titleSelected {
+    0% {
+      color: rgb(255, 255, 255);
+    }
+    33% {
+        color: rgb(90, 175, 28);
+      }
+    66% {
+        color: rgb(90, 175, 28);
+      }  
+    100% {
+        color: rgb(255, 255, 255);
+    }
+  }
+  
+  h2.selected {
+    animation: titleSelected 1s infinite;
+  }
+
+#playlist {
+    list-style: none;
+    padding: 3%;
+    margin: 2%;
+    display: inline; 
+    display: block;
+    width: 43%;
+  }
+  
+  /* Style pour chaque élément de la liste de lecture */
+  
+/*#playlist li {
+    flex: 0 0 calc(30%); 
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 1s ease;
+  }
+  */
+
+  #playlist li {
+    background-color: #000000;
+    padding: 30px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 1s ease;
+  }
+
+  /* Style pour chaque titre */
+  #playlist li h2 {
+    margin: 0;
+    font-size: 30px;
+  }
+  
+
+  #playlist li img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  
+  /* Au survol d'un élément de la liste de lecture */
+  #playlist li:hover {
+    background-color: #4e4e4e;
+  }
+  
+
+/* Style pour la catégorie de musique */
+#playlist li small {
+    color: white;
+    
+  }
+
+/* Style pour la catégorie de musique lorsque la lecture est en pause */
+  #playlist li.paused small {
+    color: gray;
+  }
+  
+
+  /* Style pour le bouton rectangulaire au survol */
+  nav .button:hover {
+    background-color: #45a049; /* Couleur de fond du bouton au survol */
+  }
+  
+
+  /*Bouton Pause*/
+  #randomButton {
+    font-size: 1.2rem;
+    position: relative;
+    width: 10%;
+    height: 60px;
+    border: none;
+    border-radius: 0%;
+    background-color: #1ED760;
+    color: #000000;
+    font-family: sans-serif;
+    cursor: pointer;
+    overflow: hidden;
+    bottom: 30px;
+  }
+  
+  #randomButton span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    transition: all 0.3s ease;
+  }
+   
+
+  /* Vignyle */
+
+ @keyframes turnAround {
+    0% {
+        transform: rotate(0deg) /*scale(0.75)*/;
+    }
+
+    50% {
+        transform: rotate(180deg) /*scale(1)*/;
+    }
+
+    100% {
+        transform: rotate(360deg) /*scale(0.75)*/;
+    }
+}
+
+.cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vinyle {
+    width: 550px;
+    height: 550px;
+}
+
+.disque {
+    position: fixed;
+    display: inline-block;
+    animation: turnAround 5s infinite linear;
+    top: 12%; /* Centrage vertical */
+    left: 60%; /* Centrage horizontal */
+    transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
+}
