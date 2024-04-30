@@ -224,3 +224,7 @@ h2 {
     left: 60%; /* Centrage horizontal */
     transform: translate(-50%, -50%); /* Décalage de moitié de la largeur et de la hauteur */
 }
+
+.paused {
+    animation-play-state: paused;
+}

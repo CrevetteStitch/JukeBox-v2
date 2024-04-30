@@ -3,6 +3,7 @@ navbar.classList.add('open');
 
 const playlist = document.getElementById("playlist");
 const lecteur = document.querySelector("#lecteur");
+const disque = document.querySelector(".disque");
 
 const config = {
     urlCover : "assets/pictures/",
@@ -50,5 +51,17 @@ const getRandomMusic = (dbmusic) => {
     const randomIndex = Math.floor(Math.random() * dbmusic.length);
     return dbmusic[randomIndex];
 };
+
+// Écouter l'événement de pause du lecteur audio
+lecteur.addEventListener("pause", function() {
+    // Mettre en pause le disque
+    disque.classList.add("paused");
+});
+
+// Écouter l'événement de reprise de la lecture du lecteur audio
+lecteur.addEventListener("play", function() {
+    // Retirer la classe "paused" pour relancer la rotation du disque
+    disque.classList.remove("paused");
+});
 
 getData();
