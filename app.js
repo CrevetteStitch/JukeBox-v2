@@ -7,12 +7,12 @@ const disque = document.querySelector(".disque");
 let dbmusic;
 
 const config = {
-    urlCover : "assets/pictures/",
-    urlSound : "assets/media/",
+    urlCover : "https://api-music-iner.onrender.com/api/v1/assets/cover",
+    urlSound : "https://api-music-iner.onrender.com/api/v1/assets/media/",
 }
 
 const getData = async () => {    
-    const req = await fetch("http://localhost:3000/api/v1/musics");
+    const req = await fetch("https://api-music-iner.onrender.com/api/v1/musics");
     console.log(req);
     const dbMusic = await req.json();
     console.log("result ", dbMusic);
